@@ -1,38 +1,7 @@
-// import React from 'react';
-// import Carousel from './Carousel';
-// import Button from './Button';
-
-// const ProductDetail = ({ product }) => {
-//     return (
-//         <div className='w-full h-fit bg-lightGray text-black pb-10'>
-//             <Carousel images={product.images} />
-//             <div className='w-full h-fit px-10 md:px-24 pt-10 flex flex-col md:flex-row gap-10 mt-10'>
-//                 <div className='w-full md:w-1/2 flex flex-col items-start justify-center'>
-//                     <h1 className='text-5xl font-saira font-medium text-left mb-4'>{product.name}</h1>
-//                     <Button
-//                         text={product.button.text}
-//                         onClick={() => console.log("Button clicked")}
-//                         bgColor={product.button.bgColor}
-//                         textColor={product.button.textColor}
-//                         border={product.button.border}
-//                         icon={product.button.icon}
-//                         iconPath={product.button.iconPath}
-//                         rightIcon={product.button.rightIcon}
-//                     />
-//                 </div>
-//                 <div className='w-full md:w-1/2 flex flex-col gap-6'>
-//                     <p className='text-base font-saira font-normal leading-7'>{product.description}</p>
-//                 </div>
-//             </div>
-//         </div>
-//     );
-// };
-
-// export default ProductDetail;
-
 import React, { useState } from 'react';
 import Carousel from './Carousel';
 import Button from './Button';
+import Detail from './Detail';
 
 const ProductDetail = ({ product }) => {
     const [showFullDescription, setShowFullDescription] = useState(false);
@@ -45,8 +14,9 @@ const ProductDetail = ({ product }) => {
             </div>
 
             {/* Main content */}
-            <div className='w-full px-6 sm:px-10 md:px-24 pt-10 flex flex-col md:flex-row gap-8 md:gap-16'>
-                {/* Left: Title & Button */}
+            <Detail product={product} />
+            {/* <div className='w-full px-6 sm:px-10 md:px-24 pt-10 flex flex-col md:flex-row gap-8 md:gap-16 p-10 md:p-40'>
+               
                 <div className='w-full md:w-1/2 flex flex-col items-start justify-center'>
                     <h1 className='text-3xl sm:text-4xl md:text-5xl font-saira font-medium mb-4'>
                         {product.name}
@@ -63,7 +33,7 @@ const ProductDetail = ({ product }) => {
                         rightIcon={product.button.rightIcon}
                     />
 
-                    {/* Optional Features / Highlights */}
+                  
                     {product.features && product.features.length > 0 && (
                         <ul className='mt-6 flex flex-wrap gap-3'>
                             {product.features.map((feat, idx) => (
@@ -78,7 +48,7 @@ const ProductDetail = ({ product }) => {
                     )}
                 </div>
 
-                {/* Right: Description */}
+           
                 <div className='w-full md:w-1/2 flex flex-col gap-4'>
                     <p className='text-base sm:text-lg font-saira leading-7'>
                         {showFullDescription || product.description.length < 200
@@ -94,7 +64,7 @@ const ProductDetail = ({ product }) => {
                         </button>
                     )}
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 };

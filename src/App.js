@@ -8,6 +8,7 @@ import ProductPage from "./ProductPage";
 // import Services from "./Services";
 import ContactUsPage from "./ContactUsPage";
 import Products from "./components/Products";
+import ServicePage from "./ServicePage";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
             <Route path="/" element={<HomePage />} />
             <Route path="/product/:productId" element={<ProductPage />} />
             <Route path="/contact" element={<ContactUsPage />} />
+            <Route path="/services" element={<ServicePage />} />
           </Routes>
         </main>
         <Footer />

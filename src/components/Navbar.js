@@ -2,11 +2,13 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Button from "./Button";
 import { FaChevronDown, FaBars, FaTimes } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 import navData from "../data/navItems";
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [activeDropdown, setActiveDropdown] = useState(null);
+    const navigate = useNavigate();
 
 
     return (
@@ -37,9 +39,14 @@ const Navbar = () => {
                         <Button key={i} {...btn} onClick={() => {
                             if (btn.text === "Download Brochure") {
                                 const link = document.createElement("a");
-                                link.href = "/sample.pdf"; // make sure sample.pdf is in public folder
+                                link.href = "/sample.pdf";
                                 link.download = "HightechCabins_Brochure.pdf";
                                 link.click();
+                            } else if (btn.text === "Whatsapp") {
+                                const phoneNumber = "918169301863";
+                                window.open(`https://wa.me/${phoneNumber}`, "_blank");
+                            } else if (btn.text === "Request a quote") {
+                                navigate("/contact"); // redirect to contact page
                             } else {
                                 console.log(btn.text);
                             }
@@ -134,8 +141,13 @@ const Navbar = () => {
                                 if (btn.text === "Download Brochure") {
                                     const link = document.createElement("a");
                                     link.href = "/sample.pdf";
-                                    link.download = "HightechCabins_Brochure.pdf"; // filename
+                                    link.download = "HightechCabins_Brochure.pdf";
                                     link.click();
+                                } else if (btn.text === "Whatsapp") {
+                                    const phoneNumber = "918169301863";
+                                    window.open(`https://wa.me/${phoneNumber}`, "_blank");
+                                } else if (btn.text === "Request a quote") {
+                                    navigate("/contact"); // redirect to contact page
                                 } else {
                                     console.log(btn.text);
                                 }

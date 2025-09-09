@@ -11,7 +11,16 @@ const Welcome = () => {
                 </p>
                 <Button
                     text={welcomeContent.button.text}
-                    onClick={() => console.log("Button clicked")}
+                    onClick={() => {
+                        if (welcomeContent.button.text === "Download Brochure") {
+                            const link = document.createElement("a");
+                            link.href = "/sample.pdf";
+                            link.download = "HightechCabins_Brochure.pdf";
+                            link.click();
+                        } else {
+                            console.log(welcomeContent.button.text);
+                        }
+                    }}
                     bgColor={welcomeContent.button.bgColor}
                     textColor={welcomeContent.button.textColor}
                     border={welcomeContent.button.border}

@@ -9,7 +9,7 @@ import {
 
 const ContactUs = () => {
     return (
-        <div className="w-full bg-darkblue min-h-screen flex flex-col items-center py-10 px-4">
+        <div className="w-full bg-grey min-h-screen flex flex-col items-center py-10 px-4">
             {/* Heading */}
             <h2 className="text-white text-2xl md:text-4xl font-semibold mb-6 text-center">
                 Contact Us
@@ -59,18 +59,18 @@ const ContactUs = () => {
 
                     {/* Phone Numbers */}
                     <div className="space-y-4 w-full">
-                        <div className="flex items-center gap-4">
+                        {/* <div className="flex items-center gap-4">
                             <div className="bg-lightOrange/20 p-3 rounded-full">
                                 <Phone className="w-5 h-5 text-lightOrange" />
                             </div>
                             <span className="text-lg font-medium">+91 9768888228</span>
-                        </div>
+                        </div> */}
 
                         <div className="flex items-center gap-4">
                             <div className="bg-lightOrange/20 p-3 rounded-full">
                                 <Phone className="w-5 h-5 text-lightOrange" />
                             </div>
-                            <span className="text-lg font-medium">+91 9768822228</span>
+                            <span className="text-lg font-medium">+91 8169-3018-63</span>
                         </div>
 
                         {/* Email */}
@@ -79,7 +79,7 @@ const ContactUs = () => {
                                 <Mail className="w-5 h-5 text-lightOrange" />
                             </div>
                             <span className="text-lg font-medium">
-                                info@jsbcabinsandcontainers.in
+                                enquiry@hightechcabins.in
                             </span>
                         </div>
 
@@ -89,7 +89,7 @@ const ContactUs = () => {
                                 <Globe className="w-5 h-5 text-lightOrange" />
                             </div>
                             <span className="text-lg font-medium">
-                                www.jsbcabinsandcontainers.in
+                                www.hightechcabins.in
                             </span>
                         </div>
 

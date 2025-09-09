@@ -23,7 +23,7 @@ const Products = () => {
                 {/* Product Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-10 mt-12">
                     {productsData.map((item, idx) => (
-                        <Product key={idx} path={item.path} title={item.title} />
+                        <Product key={idx} path={item.path} title={item.title} redirectTo={item.redirectTo} />
                     ))}
                 </div>
             </div>

@@ -40,7 +40,7 @@ const Carousel = ({ images = [] }) => {
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
         appendDots: dots => (
-            <div>
+            <div className="mt-10">
                 <ul className="flex justify-center mt-4 gap-2"> {dots} </ul>
             </div>
         ),

@@ -9,7 +9,7 @@ import finalizeData from "./data/finalizeData";
 const HomePage = () => {
     return (
         <>
-            <HeroSection />
+            <HeroSection label="Welcome to Hightech Cabins & Containers" />
             <Welcome />
             <Finalize title={finalizeData.title} description={finalizeData.description} buttons={finalizeData.buttons} />
             <Products />
