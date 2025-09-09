@@ -34,7 +34,16 @@ const Navbar = () => {
                 {/* Desktop Buttons */}
                 <div className="hidden lg:flex items-center gap-3">
                     {navData.buttons.map((btn, i) => (
-                        <Button key={i} {...btn} onClick={() => console.log(btn.text)} />
+                        <Button key={i} {...btn} onClick={() => {
+                            if (btn.text === "Download Brochure") {
+                                const link = document.createElement("a");
+                                link.href = "/sample.pdf"; // make sure sample.pdf is in public folder
+                                link.download = "HightechCabins_Brochure.pdf";
+                                link.click();
+                            } else {
+                                console.log(btn.text);
+                            }
+                        }} />
                     ))}
                 </div>
 
@@ -121,7 +130,16 @@ const Navbar = () => {
 
                     <div className="flex flex-col gap-2 mt-4">
                         {navData.buttons.map((btn, i) => (
-                            <Button key={i} {...btn} onClick={() => console.log(btn.text)} />
+                            <Button key={i} {...btn} onClick={() => {
+                                if (btn.text === "Download Brochure") {
+                                    const link = document.createElement("a");
+                                    link.href = "/sample.pdf";
+                                    link.download = "HightechCabins_Brochure.pdf"; // filename
+                                    link.click();
+                                } else {
+                                    console.log(btn.text);
+                                }
+                            }} />
                         ))}
                     </div>
                 </div>
