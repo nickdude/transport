@@ -11,7 +11,7 @@ const footerItems = {
         phone: "+91 8169-3018-63",
         email: "enquiry@hightechcabins.in",
         address:
-            "Shop No. 03, Dhansar Village, Near Ruby Steel, Opposite Universal Traders",
+            "Shop No. 03, Dhansar Village, Near Ruby Steel, Opposite Universal Traders, Mumbra- Panvel Highway, Taloja, Navi Mumbai- 410208",
     },
     links: {
         title: "Main Links",
